@@ -12,7 +12,7 @@
     <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_settings"
-        android:title="Setting"
+        android:title="Settings"
         app:cnb_iconColor="@android:color/white"
         />
 
