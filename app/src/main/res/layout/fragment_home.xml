@@ -6,61 +6,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.HomeFragment">
 
-    <RelativeLayout
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/sliding_layout"
+        android:layout_marginBottom="70dp"
+        android:gravity="bottom"
         android:background="@color/black1"
+        app:umanoPanelHeight="68dp"
+        app:umanoShadowHeight="4dp"
         >
 
-        <TextView
+        <RelativeLayout
+            android:id="@+id/upperRelativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Popular"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:id="@+id/popular"
-            />
+            android:layout_height="match_parent"
+            android:background="@color/black1"
+            >
 
-        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/first_recycler_view"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/popular"
-            android:layout_gravity="center_vertical"
-            app:msrv_gravity="start"
-            app:msrv_interval="2"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:id="@+id/popular"
+                />
+
+            <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_recycler_view"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/popular"
+                android:layout_gravity="center_vertical"
+                app:msrv_gravity="start"
+                app:msrv_interval="2"
+                />
 
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Made For You"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/white"
-            android:id="@+id/made_for_you"
-            android:layout_below="@id/first_recycler_view"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Made For You"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:id="@+id/made_for_you"
+                android:layout_below="@id/first_recycler_view"
+                />
 
-        <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/second_recycler_view"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/made_for_you"
-            android:layout_gravity="center_vertical"
-            app:msrv_gravity="start"
-            app:msrv_interval="2"
-            />
+            <com.takusemba.multisnaprecyclerview.MultiSnapRecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_recycler_view"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/made_for_you"
+                android:layout_gravity="center_vertical"
+                app:msrv_gravity="start"
+                app:msrv_interval="2"
+                />
 
-    </RelativeLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/sliding_window_layout"/>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
 
 </FrameLayout>
