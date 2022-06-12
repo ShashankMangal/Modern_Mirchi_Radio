@@ -14,6 +14,7 @@ import com.sharkBytesLab.modernMirchiRadio.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    public static ChipNavigationBar chipNavigationBar;
     private FragmentManager fragmentManager;
 
     @Override
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        chipNavigationBar = findViewById(R.id.bottom_nav);
 
         if(savedInstanceState == null)
         {
